@@ -38,11 +38,11 @@ export default function Home() {
   }, [search, page]);
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-6">
+    <div className="min-h-screen bg-gray-900 text-gray-100 p-6">
       <h1 className="text-4xl font-extrabold text-center mb-4 text-blue-400">
         GitHub User Finder
       </h1>
-      <p className="text-center text-gray-400 mb-6">
+      <p className="text-center text-gray-300 mb-6">
         Search and explore GitHub user profiles
       </p>
 
@@ -71,8 +71,8 @@ export default function Home() {
           ))}
         </div>
       ) : search.trim() === "" ? (
-        <div className="text-center text-gray-500 mt-20">
-          <p className="text-xl">Start by typing a username above 👆</p>
+        <div className="text-center text-gray-400 mt-20">
+          <p className="text-xl">Start by typing a GitHub username above 👆</p>
         </div>
       ) : users.length > 0 ? (
         <>
@@ -94,7 +94,7 @@ export default function Home() {
                     <h2 className="text-xl text-center font-semibold">
                       {user.login}
                     </h2>
-                    <p className="text-center text-sm text-gray-400 mt-2">
+                    <p className="text-center text-sm text-gray-300 mt-2">
                       View Profile →
                     </p>
                   </div>
@@ -127,7 +127,7 @@ export default function Home() {
         <p className="text-center text-gray-400 mt-10">No results found.</p>
       )}
 
-      <footer className="mt-16 text-center text-gray-600 text-sm">
+      <footer className="mt-16 text-center text-gray-400 text-sm">
         Built with ❤️ by Abhishek Sharma
       </footer>
     </div>
